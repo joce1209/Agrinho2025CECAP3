@@ -4,9 +4,78 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Impacto do Desmatamento</title>
-  <link rel="stylesheet" href="style.css">
 
   <style>
+    /* Esconde o checkbox */
+    #abrir-conteudo {
+      display: none;
+    }
+
+    /* Esconde o conteúdo até o checkbox estar marcado */
+    #abrir-conteudo:not(:checked) ~ #conteudo {
+      display: none;
+    }
+
+    /* Estilo da imagem que funciona como botão */
+    label img {
+      width: 100%;
+      max-width: 800px;
+      display: block;
+      margin: 50px auto;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    label img:hover {
+      transform: scale(1.02);
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+
+    header, main, footer {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background-color: #ffffff;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #2a5d34;
+    }
+
+    .cta-button, .cta-footer {
+      padding: 10px 15px;
+      background-color: #2a5d34;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .cta-button:hover, .cta-footer:hover {
+      background-color: #1c3d22;
+    }
+
+    iframe {
+      max-width: 100%;
+    }
+
     .toggle-link,
     .toggle-iframe {
       display: none;
@@ -22,103 +91,40 @@
       margin-top: 10px;
     }
 
-    .cta-button, .cta-footer {
-      padding: 10px 15px;
-      background-color: #2a5d34;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-
-    .cta-button:hover, .cta-footer:hover {
-      background-color: #1c3d22;
-    }
-
-    iframe {
-      max-width: 100%;
+    h1, h2, h3 {
+      color: #2a5d34;
     }
   </style>
 </head>
 
 <body>
-<header>
-  <h1>Impacto do Desmatamento</h1>
-  <img src="cataratas.webp" alt="Foto das Cataratas do Iguaçu, um lugar com muitas árvores e mata nativa preservada.">
-  <p>O desmatamento intensifica fenômenos negativos no meio ambiente e na vida das pessoas, afetando enchentes, temperatura e qualidade de vida.</p>
-  <nav>
-    <ul>
-      <li><a href="#problemas">Os Problemas</a></li>
-      <li><a href="#consequencias">Consequências</a></li>
-      <li><a href="#conclusao">Conclusão</a></li>
-    </ul>
-  </nav>
-</header>
 
-<main>
-  <section id="problemas" class="conteudo">
-    <h2>Os Problemas</h2>
-    <article>
-      <h3>Aumento das enchentes</h3>
-      <p>As árvores absorvem a água da chuva e ajudam na infiltração no solo. Sem vegetação, a água escoa rapidamente, causando enchentes.</p>
-    </article>
+  <!-- Checkbox para controlar a exibição -->
+  <input type="checkbox" id="abrir-conteudo">
 
-    <article>
-      <h3>Calor excessivo e ilhas de calor</h3>
-      <p>O desmatamento reduz a evapotranspiração das plantas, elevando a temperatura das cidades e aumentando o efeito das ilhas de calor.</p>
-    </article>
+  <!-- Imagem que serve como botão -->
+  <label for="abrir-conteudo">
+    <img src="cataratas.webp" alt="Clique para acessar o conteúdo sobre o desmatamento">
+  </label>
 
-    <article>
-      <h3>Redução da qualidade de vida</h3>
-      <p>A destruição das florestas impacta a biodiversidade, aumenta a poluição e reduz o contato com áreas verdes, afetando a saúde mental e respiratória.</p>
-    </article>
+  <!-- Conteúdo que aparece após o clique -->
+  <div id="conteudo">
+    <header>
+      <h1>Impacto do Desmatamento</h1>
+      <img src="cataratas.webp" alt="Foto das Cataratas do Iguaçu, um lugar com muitas árvores e mata nativa preservada.">
+      <p>O desmatamento intensifica fenômenos negativos no meio ambiente e na vida das pessoas, afetando enchentes, temperatura e qualidade de vida.</p>
+      <nav>
+        <ul>
+          <li><a href="#problemas">Os Problemas</a></li>
+          <li><a href="#consequencias">Consequências</a></li>
+          <li><a href="#conclusao">Conclusão</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <!-- Botão e link escondido -->
-    <input type="checkbox" id="mostrar-link-1">
-    <label for="mostrar-link-1">Clique aqui para ver o vídeo</label>
-    <a href="https://www.youtube.com/watch?v=ILh7nDEKGqc" class="cta-button toggle-link" target="_blank">
-      Como impacta o mundo?
-    </a>
-  </section>
-
-  <section id="consequencias" class="conteudo">
-    <h2>Consequências</h2>
-    <ul>
-      <li>Aumento das enchentes e erosão do solo</li>
-      <li>Aumento das temperaturas e mudanças climáticas</li>
-      <li>Perda da biodiversidade</li>
-      <li>Redução da qualidade de vida nas cidades</li>
-      <li>Agravamento de problemas de saúde</li>
-      <li>Impacto na economia de comunidades locais</li>
-    </ul>
-  </section>
-
-  <section id="conclusao" class="conteudo">
-    <h2>Conclusão</h2>
-    <p>O desmatamento impacta diretamente a vida humana. Para evitar suas consequências, é necessário preservar o meio ambiente, investir em reflorestamento e adotar práticas sustentáveis.</p>
-
-    <!-- Botão e link escondido -->
-    <input type="checkbox" id="mostrar-link-2">
-    <label for="mostrar-link-2">Clique aqui para assistir ao vídeo</label>
-    <a href="https://www.youtube.com/watch?v=ILh7nDEKGqc" class="cta-button toggle-link" target="_blank">
-      Ver vídeo na íntegra
-    </a>
-
-    <!-- Botão e vídeo escondido -->
-    <input type="checkbox" id="mostrar-video">
-    <label for="mostrar-video">Clique aqui para exibir o vídeo incorporado</label>
-    <iframe class="toggle-iframe" width="560" height="315" src="https://www.youtube.com/embed/ILh7nDEKGqc?si=feol6sZCHo1Cg-jQ" title="YouTube video."></iframe>
-  </section>
-</main>
-
-<footer>
-  <!-- Botão e link escondido -->
-  <input type="checkbox" id="mostrar-link-3">
-  <label for="mostrar-link-3">Clique aqui para participar</label>
-  <a href="https://www.linkedin.com/in/femascheti" class="cta-footer toggle-link" target="_blank">
-    Faça parte dessa causa!
-  </a>
-  <p>2025 | @femascheti</p>
-</footer>
-
-</body>
-</html>
+    <main>
+      <section id="problemas" class="conteudo">
+        <h2>Os Problemas</h2>
+        <article>
+          <h3>Aumento das enchentes</h3>
+          <p>A
