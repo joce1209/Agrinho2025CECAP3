@@ -5,39 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Impacto do Desmatamento</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      line-height: 1.6;
+    .conteudo input {
+      display: none;
     }
 
-    header, footer {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    details {
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      padding: 10px;
-      background-color: #f9f9f9;
-    }
-
-    summary {
+    .toggle-label {
+      display: block;
       cursor: pointer;
       font-size: 1.2em;
       font-weight: bold;
       color: #2a5d34;
-      outline: none;
+      border-bottom: 1px solid #ccc;
+      padding: 5px 0;
+      margin-top: 20px;
     }
 
-    summary:hover {
+    .toggle-label:hover {
       color: #1c3d22;
     }
 
-    iframe {
-      max-width: 100%;
+    .conteudo-inner {
+      display: none;
+      padding-left: 10px;
+      margin-top: 10px;
+    }
+
+    input:checked + .toggle-label + .conteudo-inner {
+      display: block;
     }
 
     .cta-button, .cta-footer {
@@ -50,8 +44,8 @@
       margin-top: 10px;
     }
 
-    .cta-button:hover, .cta-footer:hover {
-      background-color: #1c3d22;
+    iframe {
+      max-width: 100%;
     }
   </style>
 </head>
@@ -59,18 +53,4 @@
 
 <header>
   <h1>Impacto do Desmatamento</h1>
-  <img src="cataratas.webp" alt="Foto das Cataratas do Iguaçu, um lugar com muitas árvores e mata nativa preservada." width="100%">
-  <p>O desmatamento intensifica fenômenos negativos no meio ambiente e na vida das pessoas, afetando enchentes, temperatura e qualidade de vida.</p>
-</header>
-
-<main>
-  <details>
-    <summary>Os Problemas</summary>
-    <article>
-      <h3>Aumento das enchentes</h3>
-      <p>As árvores absorvem a água da chuva e ajudam na infiltração no solo. Sem vegetação, a água escoa rapidamente, causando enchentes.</p>
-    </article>
-    <article>
-      <h3>Calor excessivo e ilhas de calor</h3>
-      <p>O desmatamento reduz a evapotranspiração das plantas, elevando a temperatura das cidades e aumentando o efeito das ilhas de calor.</p>
-    </ar
+  <img src="cataratas.webp" alt="Foto das Cataratas do Iguaçu, um lugar com muitas árvores e mata nativa prese
