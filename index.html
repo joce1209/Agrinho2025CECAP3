@@ -6,17 +6,16 @@
   <title>Impacto do Desmatamento</title>
 
   <style>
-    /* Esconde o checkbox */
+    /* Checkbox invisível */
     #abrir-conteudo {
       display: none;
     }
 
-    /* Esconde o conteúdo até o checkbox estar marcado */
+    /* Oculta o conteúdo até o checkbox ser marcado */
     #abrir-conteudo:not(:checked) ~ #conteudo {
       display: none;
     }
 
-    /* Estilo da imagem que funciona como botão */
     label img {
       width: 100%;
       max-width: 800px;
@@ -33,17 +32,17 @@
 
     body {
       font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-      color: #222;
       margin: 0;
       padding: 0;
+      background-color: #f5f5f5;
+      color: #222;
     }
 
     header, main, footer {
       padding: 20px;
       max-width: 900px;
       margin: auto;
-      background-color: #ffffff;
+      background-color: #fff;
     }
 
     nav ul {
@@ -55,6 +54,10 @@
 
     nav a {
       text-decoration: none;
+      color: #2a5d34;
+    }
+
+    h1, h2, h3 {
       color: #2a5d34;
     }
 
@@ -76,8 +79,7 @@
       max-width: 100%;
     }
 
-    .toggle-link,
-    .toggle-iframe {
+    .toggle-link, .toggle-iframe {
       display: none;
     }
 
@@ -91,23 +93,23 @@
       margin-top: 10px;
     }
 
-    h1, h2, h3 {
-      color: #2a5d34;
+    section {
+      margin-top: 30px;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Checkbox para controlar a exibição -->
+  <!-- Checkbox para abrir conteúdo -->
   <input type="checkbox" id="abrir-conteudo">
 
-  <!-- Imagem que serve como botão -->
+  <!-- Imagem inicial que funciona como botão -->
   <label for="abrir-conteudo">
     <img src="cataratas.webp" alt="Clique para acessar o conteúdo sobre o desmatamento">
   </label>
 
-  <!-- Conteúdo que aparece após o clique -->
+  <!-- Conteúdo escondido inicialmente -->
   <div id="conteudo">
     <header>
       <h1>Impacto do Desmatamento</h1>
@@ -123,8 +125,9 @@
     </header>
 
     <main>
-      <section id="problemas" class="conteudo">
+      <section id="problemas">
         <h2>Os Problemas</h2>
+
         <article>
           <h3>Aumento das enchentes</h3>
           <p>As árvores absorvem a água da chuva e ajudam na infiltração no solo. Sem vegetação, a água escoa rapidamente, causando enchentes.</p>
@@ -148,7 +151,7 @@
         </a>
       </section>
 
-      <section id="consequencias" class="conteudo">
+      <section id="consequencias">
         <h2>Consequências</h2>
         <ul>
           <li>Aumento das enchentes e erosão do solo</li>
@@ -160,7 +163,7 @@
         </ul>
       </section>
 
-      <section id="conclusao" class="conteudo">
+      <section id="conclusao">
         <h2>Conclusão</h2>
         <p>O desmatamento impacta diretamente a vida humana. Para evitar suas consequências, é necessário preservar o meio ambiente, investir em reflorestamento e adotar práticas sustentáveis.</p>
 
@@ -191,4 +194,5 @@
 
 </body>
 </html>
+
 
