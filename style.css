@@ -1,23 +1,7 @@
-/* Importação das fontes personalizadas do Google Fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&family=Rakkas&display=swap');
 
-/* Estilos responsivos para telas pequenas (celulares) */
-@media screen and (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
 
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    iframe, img {
-        width: 100%;
-    }
-}
-
-/* Variáveis de cor e fonte para facilitar personalizações */
 :root {
     --primary-color: #026773;
     --secondary-color: #3CA6A6;
@@ -28,7 +12,7 @@
     --font-titulo: "Rakkas", serif;
 }
 
-/* Reset e fonte padrão */
+
 * {
     margin: 0;
     padding: 0;
@@ -36,7 +20,6 @@
     font-family: var(--font-body);
 }
 
-/* Corpo da página com centralização e cor de fundo */
 body {
     background-color: var(--background-color);
     color: var(--text-color);
@@ -48,22 +31,21 @@ body {
     padding: 20px;
 }
 
-/* Estilo para títulos principais */
+
 h1, h2, h3 {
     font-family: var(--font-titulo);
 }
 
-/* Títulos menores com margem */
 h3 {
     margin-top: 25px;
 }
 
-/* Parágrafos com espaçamento */
-p {
+
+p, ul {
     margin-top: 20px;
 }
 
-/* Imagens responsivas */
+
 img {
     max-width: 90%;
     height: auto;
@@ -71,14 +53,7 @@ img {
     margin: 15px 0;
 }
 
-/* Container principal do conteúdo */
-main {
-    max-width: 800px;
-    width: 100%;
-    text-align: left;
-}
 
-/* Cabeçalho centralizado */
 header {
     width: 100%;
     max-width: 800px;
@@ -90,7 +65,7 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Menu de navegação estilizado */
+
 nav ul {
     list-style: none;
     display: flex;
@@ -112,16 +87,22 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Seções de conteúdo com caixa visual */
+main {
+    max-width: 800px;
+    width: 100%;
+}
+
+
 .conteudo {
     background-color: white;
     padding: 20px;
     margin: 20px 0;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
 }
 
-/* Botão de chamada para ação */
+
 .cta-button {
     display: inline-block;
     margin-top: 20px;
@@ -135,4 +116,31 @@ nav a:hover {
 
 .cta-button:hover {
     background-color: var(--button-hover);
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-color);
+}
+
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    main, .conteudo, section, article, ul, p, h2, h3 {
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    iframe, img {
+        width: 100%;
+    }
 }
